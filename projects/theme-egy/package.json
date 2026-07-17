@@ -1,8 +1,26 @@
 {
   "name": "theme-egy",
-  "version": "0.0.1",
+  "version": "1.1.4",
+  "description": "Modern Angular theme management library powered by Signals. Light/dark mode with CSS custom properties.",
+  "keywords": [
+    "angular",
+    "theme",
+    "dark-mode",
+    "light-mode",
+    "signals",
+    "css-variables"
+  ],
+  "author": "Abdo",
+  "license": "MIT",
+  "homepage": "https://github.com/abdelfattahqandil21-oss/theme-egy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelfattahqandil21-oss/theme-egy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdelfattahqandil21-oss/theme-egy/issues"
+  },
   "peerDependencies": {
-    "@angular/common": "^20.3.0",
     "@angular/core": "^20.3.0"
   },
   "dependencies": {
