@@ -3,5 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "theme-egy": {
+      "projectType": "library",
+      "root": "projects/theme-egy",
+      "sourceRoot": "projects/theme-egy/src",
+      "prefix": "theme",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/theme-egy/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/theme-egy/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/theme-egy/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "385fc136-58e6-4506-b095-b5233b9f2f06"
   }
 }
