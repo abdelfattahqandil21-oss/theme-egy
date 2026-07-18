@@ -1,6 +1,6 @@
 {
   "name": "theme-egy",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Modern Angular theme management library powered by Signals. Light/dark mode with CSS custom properties.",
   "keywords": [
     "angular",

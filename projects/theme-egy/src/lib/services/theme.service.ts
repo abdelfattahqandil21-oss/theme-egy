@@ -42,9 +42,9 @@ import { safeGetItem, safeSetItem } from '../utils/storage';
  * - **`'css'`:** Colors are read from existing CSS custom properties
  *   (`--theme-*`) on `<html>`. The library does not write CSS variables.
  *
- * The active {@link ThemeColorProvider} is injected via the
- * `THEME_COLOR_PROVIDER` token, which is selected automatically by
- * {@link provideTheme} based on the `colorSource` setting.
+ * The active {@link ThemeColorProvider} implementation
+ * (`ConfigColorProvider` or `CssVariableColorProvider`) is selected
+ * internally based on the `colorSource` setting in {@link ThemeConfig}.
  *
  * ### Runtime Palette Overrides
  *
@@ -183,6 +183,10 @@ export class ThemeService {
       const mode = this._mode();
       safeSetItem(this._storageKey, mode, this._storageStrategy);
     });
+
+    if (!this._autoApply) {
+      return;
+    }
 
     effect(() => {
       if (typeof document === 'undefined') {

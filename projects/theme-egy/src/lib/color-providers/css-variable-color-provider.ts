@@ -62,7 +62,6 @@ const SSR_FALLBACK_COLORS: ColorTokens = {
  * changes or `refresh()` is called.
  */
 export class CssVariableColorProvider extends ThemeColorProvider {
-  private readonly _cache = signal<ColorTokens | null>(null);
   private readonly _refreshToken = signal(0);
 
   readonly colors: Signal<ColorTokens>;
